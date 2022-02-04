@@ -106,7 +106,7 @@ class ActionEmail(Action):
         s.starttls()
 
         # Authentication
-        s.login("sublimeamey21@gmail.com", "sublime@2021")
+        s.login("email_id", "password")
 
         newline = '\n'
 
@@ -114,7 +114,7 @@ class ActionEmail(Action):
         message = f" This is the details of the new user.{newline}\n Name: {user_name}, {newline}\n Contact no: {user_phone_no}, {newline}\n Email Id: {user_email_id}, {newline}\n Interested in: {user_looking_for}"
 
         # Sending the mail
-        s.sendmail(from_addr="sublimeamey21@gmail.com", to_addrs="naysatheamey@gmail.com", msg=message)
+        s.sendmail(from_addr="sender_email_id", to_addrs="receiver_email_id", msg=message)
 
         # Closing the connection
         s.quit()
